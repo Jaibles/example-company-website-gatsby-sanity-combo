@@ -62,6 +62,11 @@ export default {
       type: 'blockContent'
     },
     {
+      name: 'Info',
+      title: 'Place Info',
+      type: 'blockText'
+    },
+    {
       name: 'relatedPosts',
       title: 'Related Posts',
       type: 'array',

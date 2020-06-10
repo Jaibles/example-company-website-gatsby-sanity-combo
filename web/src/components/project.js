@@ -11,7 +11,8 @@ import {getBlogUrl} from '../lib/helpers'
 import styles from './project.module.css'
 
 function Project (props) {
-  const { _rawBody, title, categories, mainImage, members, publishedAt, relatedProjects, relatedPosts } = props
+  const { _rawBody, title, categories, mainImage, members, _rawInfo, publishedAt, relatedProjects, relatedPosts } = props
+  console.log(_rawInfo, mainImage)
   return (
     <article className={styles.root}>
       {props.mainImage && mainImage.asset && (
@@ -51,6 +52,9 @@ function Project (props) {
               </div>
             )}
           </div>
+          <aside className={styles.metaContent}>
+            {_rawInfo && <BlockContent blocks={_rawInfo || []} />}
+          </aside>
         </div>
       </Container>
     </article>

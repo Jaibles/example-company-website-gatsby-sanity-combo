@@ -60,6 +60,7 @@ export const query = graphql`
         current
       }
       _rawBody
+      _rawInfo
       members {
         _key
         person {
@@ -95,7 +96,6 @@ export const query = graphql`
 const ProjectTemplate = props => {
   const { data, errors } = props
   const project = data && data.project
-  console.log(data)
   return (
     <Layout>
       {errors && <SEO title='GraphQL Error' />}
